@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Grade Prediction Results</title>
+  </head>
+  <body>
+    <h1>Student Grade Prediction Results</h1>
+    {% if Quer_Fazer_Graduacao and Nota_1Semestre and predicted_nota_2_semestre
+    %}
+    <h2>Resultado da Predição:</h2>
+    <p>
+      Quer Fazer Graduação: {% if Quer_Fazer_Graduacao == 1 %}Sim{% else %}Não{%
+      endif %}
+    </p>
+    <p>Nota do Primeiro Semestre: {{ Nota_1Semestre }}</p>
+    <p>Nota Prevista do Segundo Semestre: {{ predicted_nota_2_semestre }}</p>
+    {% else %}
+    <p>Nenhum resultado disponível.</p>
+    {% endif %}
+    <br />
+    <a href="/">Voltar ao formulário</a>
+  </body>
+</html>

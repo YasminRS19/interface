@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Grade Predcition</title>
+  </head>
+  <body>
+    <h1>Prediction</h1>
+    <form action="/" method="post">
+      <label for="Quer_Fazer_Graduacao">Quer Fazer Graduação ?</label>
+      <select name="Quer_Fazer_Graduacao" required>
+        <option value="1">Sim</option>
+        <option value="0">Não</option></select
+      ><br />
+
+      <label for="Nota_1Semestre">Nota do Primeiro Semestre:</label>
+      <input type="text" name="Nota_1Semestre" required /><br />
+
+      <input type="submit" value="Predict" />
+    </form>
+
+    {% if prediction %}
+    <script>
+      document.location.href = "/results";
+    </script>
+    {% endif %}
+  </body>
+</html>
